@@ -1,0 +1,193 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- <hr class="m-2"> -->
+<hr class="m-4">
+<div class="container">
+
+
+    <div class="container-fluid mt-5">
+
+        <hr class="m-1">
+
+
+        <form>
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Property type
+                </button>
+                <div class="dropdown-menu">
+                    <li><label class="checkbox"><input type="checkbox">Apartment</label></li>
+                    <li><label class="checkbox"><input type="checkbox">Plot</label></li>
+                    <li><label class="checkbox"><input type="checkbox">Villa</label></li>
+                    <li><label class="checkbox"><input type="checkbox">Builder/Commercial</label></li>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    BHK
+                </button>
+                <ul class="dropdown-menu">
+                    <li><label class="checkbox"><input type="checkbox">1BHK</label></li>
+                    <li><label class="checkbox"><input type="checkbox">BHK</label></li>
+                    <li><label class="checkbox"><input type="checkbox">2BHK</label></li>
+                    <li><label class="checkbox"><input type="checkbox">3BHK</label></li>
+
+
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    BUDGET
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="text-center">
+                        <li><label class="inputtext">Min</label></li>
+                        <select class="form-select">
+                            <option selected>min range</option>
+                            <option value="₹ 1 L">₹ 1 L</option>
+                            <option value="₹ 2 L">₹ 2 L</option>
+                            <option value="₹ 3 L">₹ 3 L</option>
+                            <option value="₹ 5 L">₹ 5 L</option>
+                            <option value="₹ 10 L">₹ 10 L</option>
+                            <option value="₹ 15 L">₹ 15 L</option>
+                            <option value="₹ 20 L">₹ 20 L</option>
+                            <option value="₹ 25 L">₹ 25 L</option>
+                            <option value="₹ 50 L">₹ 50 L</option>
+                        </select>
+                        <li><label class="inputtext">Max</label></li>
+                        <select class="form-select">
+                            <option selected>max range</option>
+                            <option value="₹ 1cr">₹ 1cr</option>
+                            <option value="₹ 2cr">₹ 2cr</option>
+                            <option value="₹ 3cr">₹ 3cr</option>
+                            <option value="₹ 4cr">₹ 4cr</option>
+                            <option value="₹ 5cr">₹ 5cr</option>
+                            <option value="₹ 10cr">₹ 10cr</option>
+                            <option value="₹ 15cr">₹ 15cr</option>
+                            <option value="₹ 20cr">₹ 20cr</option>
+                        </select>
+                    </div>
+                </ul>
+
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Super Build Up Area
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="text-center">
+                        <li><label class="inputtext">Min</label></li>
+                        <input type="text" name="" placeholder="min sqft">
+                        <li><label class="inputtext">Max</label></li>
+                        <input type="text" name="" placeholder="max sqft">
+                    </div>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-primary" style="position: absolute;margin-left: 5%;">Apply
+                Filter</button>
+
+
+            <div class="btn-group" style="position: absolute;margin-left: 40%;">
+                <button type="button" class="btn btn-secondary dropdown-toggle " data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    More Filter
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/new_project.html">New Projects</a></li>
+                    <li><a class="dropdown-item" href="/Ready_to_move.html">Ready to Move
+                            Projects</a></li>
+                    <li><a class="dropdown-item" href="/under_project.html">Under Construction
+                            Projects</a></li>
+
+                </ul>
+            </div>
+        </form>
+
+
+
+
+
+
+        <hr class="m-1">
+        {% for data in floors %}
+         
+            
+        
+
+
+
+        <div class="col-mt-4 w-75">
+            <div
+                class="row g-0 border rounded overflow-hidden flex-md-row mb-2   shadow-sm h-md-500 position-relative bg-body-secondary">
+                <div class="card mt-2" style="width: 25rem;">
+                    <img src="/static/hall.avif" class="card-img-top" alt="...">
+                    <div class="card-body bg-body-dark">
+                        <div class="col">
+                            <h6 class="text-start mx-2"></h6>
+
+                            <h6 class="row">Possession-Date: {{data[6]}}</h6>
+                            
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-6 p-2 d-flex flex-column position-static">
+                    <h5 class="text-primary">Projects :&nbsp&nbsp<b>{{data[0]}} &nbsp({{data[1]}})</b></h5>
+
+                    
+                    
+                    <div class="mb-srp__card__tags">
+                        <span class="mb-srp__card__tags--tick  no-tick">
+
+                        </span>
+                        <hr class="m-1">
+
+
+                        <div class="bg-body-secondary p-3">BHK : <b>{{data[2]}}</b></div>
+
+                        <hr class="m-1">
+                        <div class="flex-md-row bg-body-secondary p-3">Price : <b>₹{{data[3]}}/-</b></div>
+
+
+
+
+                        <hr class="m-1">
+                        <div class="vstack">
+                            <div class="bg-body-secondary p-3">Super Build Up Area : <b>{{data[4]}} </b></div>
+
+                        </div>
+
+                        <hr class="m-1">
+                        <div class="vstack">
+                            <div class="bg-body-secondary p-3">Select Area : <b>{{data[5]}}</b></div>
+                        </div>
+                        <hr class="m-1">
+
+                    </div>
+                    <div class="text-end">
+                        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                            href="{{url_for('information', Property_id = data[7])}}">
+                            More details
+                        </a>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+
+{% endblock %}

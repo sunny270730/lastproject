@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<center>
+    <form action="{{url_for('post_project')}}" method="post">
+        <div class="card bg-body-secondary mb-2" style="width: 70%;">
+            <div class="py-5 text-center">
+                {% if alert %}
+                <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                    Same project name in this city already exists
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endif %}
+                <h2 class="mt-4">Welcome to Post Project </h2>
+                <p class="lead"></p>
+            </div>
+            <hr>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label><h6>Project Name</h6></label>
+                            <input type="text" class="form-control" placeholder="Enter project name"
+                                name="project_name">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label><h6>Project area</h6></label>
+                            <input type="number" class="form-control" placeholder="enter project area in sqft"
+                                name="project_area">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    
+                        <div class="col mt-2">
+                            <div class="form-group">
+                                <label><h6>City</h6></label>
+                                <input type="text" class="form-control" placeholder="enter city" name="project_city">
+                            </div>
+                        </div>
+                    
+                        <div class="col mt-2">
+                            <div class="form-group">
+                                <label><h6>Locality</h6></label>
+                                <input type="text" class="form-control" placeholder="enter locality"
+                                    name="project_locality">
+                            </div>
+                        </div>
+                    
+                        <div class="col mt-2">
+                            <div class="form-group">
+                                <label><h6>Address</h6></label>
+                                <input type="text" class="form-control" placeholder="enter address"
+                                    name="project_address">
+                            </div>
+                        </div>
+                    
+                </div>
+                <hr>
+                <div class="row mt-4 text-start">
+                    <label><h6>Project Status</h6></label>
+                    <div class="col-lg-2 mx-2 form-check">
+                        <input class="form-check-input" type="radio" name="project_status" value="Under Construction">
+                        <label class="form-check-label">
+                            Under Construction
+                        </label>
+                    </div>
+                    <div class="col-lg-2 form-check">
+                        <input class="form-check-input" type="radio" name="project_status" value="Ready to move">
+                        <label class="form-check-label">
+                            Ready to move
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col col-md-8 mt-2">
+                        <div class="form-group">
+                            <label><h6>Project Description</h6></label>
+                            <textarea name="project_description" id="" cols="80" rows="6"></textarea>
+                            <!-- <input type="text" class="form-control" placeholder="enter locality"> -->
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Next</button>
+            </div>
+        </div>
+    </form>
+</center>
+
+{% endblock %}

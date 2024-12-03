@@ -1,0 +1,501 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<center>
+    <hr class="m-3">
+    <div class="card bg-body-secondary mt-5" style="width: 70%;">
+        <div class="card-body">
+            <main>
+                <div class="py-5 text-center">
+
+                    <h2 class="mt-1">Welcome to Post Property </h2>
+                    <p class="lead"></p>
+                </div>
+                <div class="row g-">
+                    <!-- <div class="col-md-7 col-lg-8"> -->
+                    <hr class="m-1">
+                    <!-- <hr class="m-4"> -->
+                    <h4 class="mb-2">Post Property</h4>
+                    <hr class="m-1">
+                    <form class="needs-validation" action="/post" method="post">
+                        <div class="row g-3">
+
+
+
+
+                            <div class="row mt-4 text-start">
+                                <label for="name" class="form-label">
+                                    <h5>Property Details</h5><span class="text-body-secondary"></span>
+                                </label>
+
+                                <div class="col-sm-2 mx-2  form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="property_detail_for"
+                                        id="inlineRadio1" value="Sale">
+                                    <label class="form-check-label" for="inlineRadio1">Sale</label>
+                                </div>
+                                <div class="col-sm-2 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="property_detail_for"
+                                        id="inlineRadio2" value="Rent">
+                                    <label class="form-check-label" for="inlineRadio2">Rent/Lease</label>
+                                </div>
+                                <div class="col-sm-2 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="property_detail_for"
+                                        id="inlineRadio3" value="PG/Lease">
+                                    <label class="form-check-label" for="inlineRadio3">PG/Hostal</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row-3 mt-4  text-start">
+                            <label for="property" class="form-label">
+                                <h5>Property-Types</h5>
+                            </label>
+                            <select class="form-select" id="property" name="property1" required fdprocessedid="m2v029">
+                                <option value="">Choose...</option>
+                                <option name="property1" value="Flats for Rent">Flats for Rent</option>
+                                <option name="property1" value="House for Rent">House for Rent</option>
+                                <option name="property1" value="Villa for Rent">Villa for Rent</option>
+                                <option name="property1" value="Office for Rent">Office for Rent
+                                </option>
+                                <option name="property1" value="Commercial Space">Commercial Space
+                                </option>
+
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+
+
+
+
+
+                            <hr>
+                            <div class="row mt-4">
+                                <h5 class="text-center">Property/Projects Location</h5>
+                            <hr>
+
+                                <div class="col-6">
+                                    <span for="city" class="form-label">City</span>
+                                    <select class="form-select mt-2" id="city" name="city1" required>
+                                        <option value="">Choose...</option>
+                                        <option name="city1" value="Patiala">Patiala</option>
+                                        <option name="city1" value="Chandigarh">Chandigarh</option>
+                                        <option name="city1" value="Mohali">Mohali</option>
+                                        <option name="city1" value="Zirkpure">Zirkpure</option>
+                                        <option name="city1" value="Malout">Malout</option>
+                                        <option name="city1" value="Muktsar">Muktsar</option>
+                                        <option name="city1" value="Bathinda">Bathinda</option>
+                                        <option name="city1" value="Moga">Moga</option>
+                                        <option name="city1" value="Ludhiana">Ludhiana</option>
+                                        <option name="city1" value="Jalandhar">Jalandhar</option>
+                                        <option name="city1" value="Amritsar">Amritsar</option>
+                                        <option name="city1" value="Mansa">Mansa</option>
+                                        <option name="city1" value="Abhore">Abhore</option>
+                                        <option name="city1" value="Barnala">Barnala</option>
+                                        <option name="city1" value="Rampura">Rampura</option>
+                                        <option name="city1" value="Tapa">Tapa</option>
+                                        <option name="city1" value="Dhuri">Dhuri</option>
+                                        <option name="city1" value="Naba">Naba</option>
+                                        <option name="city1" value="Dabwali">Dabwali</option>
+                                        <option name="city1" value="Fazilka">Fazilka</option>
+                                        <option name="city1" value="Faridkot">Faridkot</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid state.
+                                    </div>
+                                </div>
+
+
+                                 <div class="col">
+                                    <label for="address2" class="form-label">Locality <span
+                                            class="text-body-secondary"></span></label>
+                                    <input type="text" class="form-control" name="locality1" id="address2">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+
+                                <div class="col">
+                                    <label for="address2" class="form-label">Project Name <span
+                                            class="text-body-secondary"></span></label>
+                                    <input type="text" class="form-control" name="projectname1" id="address2"
+                                        fdprocessedid="4h6yzj">
+                                </div>
+
+                                <div class="col">
+                                    <span for="city" class="form-label">Projects-Type</span>
+                                    <select class="form-select mt-2" id="city" name="projecttype" required>
+                                        <option value="">Choose...</option>
+                                        <option name="projecttype" value="New Projects">New Projects</option>
+                                        <option name="projecttype" value="Ready_to_move">Ready_to_move</option>
+                                        <option name="projecttype" value="Under Construction">Under Construction
+                                        </option>
+
+
+                                    </select>
+
+                                    <div class="invalid-feedback">
+                                        Please provide a valid state.
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="address2" class="form-label">Possession-Project-Date <span
+                                            class="text-body-secondary"></span></label>
+                                    <input type="date" class="form-control" name="possession1" id="address2"
+                                        fdprocessedid="4h6yzj">
+                                </div>
+                                <div class="col">
+                                    <label for="address2" class="form-label">Launched-Project-Date <span
+                                            class="text-body-secondary"></span></label>
+                                    <input type="date" class="form-control" name="launched1" id="address2"
+                                        fdprocessedid="4h6yzj">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                </div>
+
+                <hr class="my-4">
+                <h5 class="text-center">Post Property Features</h5>
+                <hr class="my-4">
+                <div class="row mt-4">
+                    <div class="col">
+                        <span for="city" class="form-label">Total Area/ Land of the Project</span>
+                        <select class="form-select" id="city" name="land1" required fdprocessedid="m2v029">
+                            <option value="">Choose...</option>
+                            <option name="land1" value="5 Acres">500 Acres</option>
+                            <option name="land1" value="10 Acres">1000 Acres</option>
+                            <option name="land1" value="15 Acres">1500 Acres</option>
+                            <option name="land1" value="20 Acres">2000 Acres</option>
+                            <option name="land1" value="25 Acres">2500 Acres</option>
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid.
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+                        <span for="flats" class="form-label">Total Flats/ Units in the Project</span>
+                        <select class="form-select" id="flats" name="flat1" required fdprocessedid="m2v029">
+                            <option value="">Choose...</option>
+                            <option name="flat1" value="100">100</option>
+                            <option name="flat1" value="200">200</option>
+                            <option name="flat1" value="300">300</option>
+                            <option name="flat1" value="400">400</option>
+                            <option name="flat1" value="500">500</option>
+                            <option name="flat1" value="600">600</option>
+                            <option name="flat1" value="700">700</option>
+                            <option name="flat1" value="800">800</option>
+                            <option name="flat1" value="900">900</option>
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <span for="floor" class="form-label">Number of Stories/ Floors</span>
+                        <select class="form-select" id="floor" name="floor1" required fdprocessedid="m2v029">
+                            <option value="">Choose...</option>
+                            <option name="floor1" value="GF-1">GF-1</option>
+                            <option name="floor1" value="GF-2">GF-2</option>
+                            <option name="floor1" value="GF-3">GF-3</option>
+                            <option name="floor1" value="GF-4">GF-4</option>
+                            <option name="floor1" value="GF-5">GF-5</option>
+                            <option name="floor1" value="GF-6">GF-6</option>
+                            <option name="floor1" value="GF-7">GF-7</option>
+                            <option name="floor1" value="GF-8">GF-8</option>
+                            <option name="floor1" value="GF-9">GF-9</option>
+                            <option name="floor1" value="GF-10">GF-10</option>
+                            <option name="floor1" value="GF-15">GF-15</option>
+                            <option name="floor1" value="GF-20">GF-20</option>
+                            <option name="floor1" value="GF-25">GF-25</option>
+                            <option name="floor1" value="GF-30">GF-30</option>
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid .
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+                        <span for="city" class="form-label">Select Area</span>
+                        <select class="form-select" id="city" name="area1" required fdprocessedid="m2v029">
+                            <option value="">Choose...</option>
+                            <option name="area1" value="Super Area">Super Area</option>
+                            <option name="area1" value="Covered Area">Covered Area</option>
+                            <option name="area1" value="Carpet Area">Carpet Area</option>
+
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row mt-4">
+
+                    <div class="col ">
+                        <span for="city" class="form-label">Number of BHK</span>
+                        <select class="form-select mt-2" id="city" name="bhk1" required fdprocessedid="m2v029">
+                            <option value="">Choose...</option>
+                            <option name="bhk1" value="1 BHK">1 BHK</option>
+                            <option name="bhk1" value="2 BHK">2 BHK</option>
+                            <option name="bhk1" value="3 BHK">3 BHK</option>
+                            <option name="bhk1" value="4 BHK">4 BHK</option>
+                            <option name="bhk1" value="5 BHK">5 BHK</option>
+                            <option name="bhk1" value=">5 BHK">>5 BHK</option>
+
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <label for="address2" class="form-label">SQFT <span class="text-body-secondary"></span></label>
+                        <input type="number" class="form-control" name="sqft1" id="address2" fdprocessedid="4h6yzj">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col ">
+                        <span class="form-label">Furnishings</span>
+                        <select class="form-select mt-2" name="Furnishings1" required>
+                            <option value="">Choose...</option>
+                            <option value="Furnishing">Furnishing</option>
+                            <option value="Semi-furnishing">Semi-furnishing</option>
+                            <option value="Non-semi-furnishing">Non-semi-furnishing</option>
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+
+                    </div>
+                    <div class="col ">
+                        <span class="form-label">Flooring</span>
+                        <select class="form-select mt-2" name="Flooring" required>
+                            <option value="">Choose...</option>
+                            <option value="Marble">Marble</option>
+                            <option value="Vitrified Tile">Vitrified Tile</option>
+                            <option value="Hardwood">Hardwood</option>
+                            <option value="Granite">Granite</option>
+                            <option value="Bamboo">Bamboo</option>
+                            <option value="Laminate">Laminate</option>
+                            <option value="Red Oxide">Red Oxide</option>
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+
+
+                    <div class="col">
+                        <label for="address2" class="form-label">Rate of Building <span
+                                class="number-body-secondary"></span></label>
+                        <input type="number" class="form-control" name="price1" id="address2" fdprocessedid="4h6yzj">
+                    </div>
+                    <div class="col">
+                        <label for="address2" class="form-label">Rate of Booking Amount <span
+                                class="text-body-secondary"></span></label>
+                        <input type="number" class="form-control" name="booking1" id="address2" fdprocessedid="4h6yzj">
+                    </div>
+
+                </div>
+
+                <hr class="my-4">
+                <div class="row mt-4 text-start">
+
+
+                    <div class="col">
+                        <h5 class="mb">Rate / Rate Per Square feet</h5>
+                        <label class="form-label">
+                            <span class="text-body-secondary">
+
+                            </span>
+                        </label>
+                        <input type="number" class="form-control" name="rate1" required="" fdprocessedid="13wkufx">
+                        <div class="invalid-feedback">
+                            Valid is required.
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <h5 class="">Special Discount / Commission</h5>
+                        <label for="name" class="form-label">
+                            <span class="text-body-secondary">
+
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="discount1" id="firstName" required=""
+                            fdprocessedid="13wkufx">
+                        <div class="invalid-feedback">
+                            Valid is required.
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <h5 class="">RERA Registration Number</h5>
+                        <label for="name" class="form-label">
+                            <span class="text-body-secondary">
+
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="rera1" id="firstName" required=""
+                            fdprocessedid="13wkufx">
+                        <div class="invalid-feedback">
+                            Valid is required.
+                        </div>
+                    </div>
+                    <div class="row mt-4 text-start">
+                        <div class="col-sm-12">
+                            <h5>Amenities
+                            </h5>
+                        </div>
+
+                        <div class="row mx-1 mt-3">
+
+                            <div class="col-lg-3 form-check">
+                                <input class="form-check-input" type="checkbox" name="Amenties1" value="Club-House"
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Club-House
+                                </label>
+                            </div>
+                            <div class="col-lg-3  form-check">
+                                <input class="form-check-input" type="checkbox" name="Amenties2" value="Car-Parking"
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Car-Parking
+                                </label>
+                            </div>
+
+
+                            <div class="col-lg-6 form-check">
+                                <input class="form-check-input" type="checkbox" name="Amenties3" value="Security"
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Security
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row mx-1 mt-3">
+
+                            <div class="col-lg-3 form-check">
+                                <input class="form-check-input" type="checkbox" name="Amenties4" value="Gymnasium"
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Gymnasium
+                                </label>
+                            </div>
+                            <div class="col-lg-3 form-check">
+                                <input class="form-check-input" type="checkbox" name="Amenties5" value="Kids Play Area"
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Kids Play Area
+                                </label>
+                            </div>
+                            <div class="col-lg-2  form-check">
+                                <input class="form-check-input" type="checkbox" name="Amenties6" value="Park"
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Park
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <!-- <label for="inputState" class="form-label">Others</label> -->
+                                <select id="inputState" class="form-select" name="Amenties7" aria-placeholder="others">
+                                    <option selected>Other</option>
+                                    <option value="Power Back Up">Power Back Up</option>
+                                    <option value="Private Terrace/Garden">Private Terrace/Garden</option>
+                                    <option value="RO Water System">RO Water System</option>
+                                    <option value="Recreational Pool">Recreational Pool</option>
+                                    <option value="Rentable Community Space">Rentable Community Space</option>
+                                    <option value="Piped Gas">Piped Gas</option>
+                                    <option value="Rain Water Harvesting">Rain Water Harvesting</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+
+        <hr class="my-4">
+
+        <!-- <h4 class="mb-3">Photos </h4> -->
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Upload image</h1>
+
+
+                    <div class="form-group">
+                        <div class="input-group">
+
+                            <span class="btn btn-success btn-file">Browse&hellip; <input type="file" name="image"
+                                    id="image">
+                                <span class="btn btn-primary" type="submit">Upload</span></span>
+                            </span>
+                            <label for="image">(Select extension for txt, jpg, pdf
+                                etc)</label>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit" fdprocessedid="6hu96">
+            Post Propety
+        </button>
+        </form>
+    </div>
+
+
+    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <p class="mb-1">©2023 101Acrs</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+    </div>
+    </div>
+</center>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<!-- MDB -->

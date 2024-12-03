@@ -1,0 +1,154 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<hr class="m-4">
+<hr class="m-4">
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            <h4>Properties Details</h4>
+        </div>
+
+        <div class="card-body">
+
+
+            <div class="container px-1 px-lg-2">
+                <h4 class="text-primary">
+                    <!-- <ul>The Real Estate Properties 101Acres.com</ul> -->
+                </h4>
+
+                <!-- Heading Row-->
+                {% for data in floors %}
+
+
+                <div class="row gx-4 gx-lg-5 align-items-center ">
+                    
+                    <h5>Price: <b class="text-dark">₹ {{data[9]}}/- &nbsp {{data[8]}}</b></h5>
+                    <hr>
+                    <div class="col-lg-5">
+
+                        <img class="img-fluid rounded mb-4 mb-lg-0" src="/static/hall.avif" alt="...">
+                    </div>
+                    <div class="col-lg-5 text-start mx-4">
+                        <div class="row text-start bg-body-secondary p-4">
+
+                            <!-- <div class="col">
+                                <span class="form-label my-2">Total-Area <br><b>{{data[0]}}</b></span>
+                            </div> -->
+                            <div class="col">
+                                <span class="form-label ">Flooring <p><b>{{data[14]}}</b></p></span>
+                            </div>
+                            <div class="col">
+                                <span class="form-label ">Total-Flat <p><b>{{data[2]}}</b></p></span>
+                            </div>
+                           
+                            <div class="col">                                  
+                                <span class="form-label ">Property for <p><b>{{data[5]}}</b></p></span>
+                            </div>
+                        </div>
+                        
+
+
+                        <div class="text-start">
+                            <div class="row  mb-3 p-3">
+
+
+                                <div class="col">
+
+
+                                    <span class="form-label">Total-Area <br><b>{{data[0]}}</b></span>
+
+                                </div>
+                                <div class="col">
+                                    <span class="form-label">Floor <br><b>{{data[4]}}</b></span>
+                                </div>
+                                <div class="col">
+                                    <span class="form-label">Status <br><b>{{data[6]}}</b></span>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        <div class="text-start">
+                            <div class="row  mb-3 p-3">
+                                
+                                
+                                <div class="col">
+                                    <span class="form-label">PropertyArea<br><b>{{data[3]}} sqft</b></span>
+                                </div>
+                                <div class="col">
+                                    <span class="form-label">BHK <br><b>{{data[1]}}</b></span>
+                                </div>
+
+                                <div class="col">
+                                    <span class="form-label">Furnishing <br><b>{{data[13]}}</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action-->
+            <div class="card text-white my-4 text-center">
+                <div class="card-body">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-primary mt-1">View Phone
+                            Number</button>
+                        <button type="button" class="btn btn-outline-primary mt-1">Contact Owner</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Content Row-->
+
+
+
+
+        </div>
+        <div class="text-start mx-3">
+            <h3 class="card-header ">More Detail</h3><br>
+
+
+
+
+            <span class="form-label my-3 mx-4">Possession-Project-Date :&nbsp&nbsp&nbsp<b>Dec {{data[6]}}</b></span><br>
+            <br>
+            <span class="form-label my-3 mx-4">Booking Amount :&nbsp&nbsp&nbsp<b>₹{{data[12]}}</b></span><br>
+            <br>
+            <span class="form-label my-3 mx-4">Address : &nbsp&nbsp&nbsp<b>{{data[8]}}</b></span><br>
+            <br>
+            <span class="form-label my-3 mx-4">Total Area/ Land of the Project :&nbsp&nbsp&nbsp<b>{{data[0]}}</b></span><br>
+            <br>
+            <span class="form-label my-3 mx-4">Rate of Building :&nbsp&nbsp&nbsp<b>₹{{data[9]}} /-</b></span><br>
+            <br>
+            <span class="form-label my-3 mx-4">Rate / Rate Per Square feet :&nbsp&nbsp&nbsp<b>₹{{data[10]}}/-</b></span><br>
+            <br>
+            <span class="form-label my-3 mx-4">RERA Registration Number :&nbsp&nbsp&nbsp<b>{{data[11]}}</b></span><br>
+            <br>
+        </div>
+
+
+
+
+
+
+        {% endfor %}
+
+
+
+
+
+
+
+        <div class="card-footer text-body-secondary">
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

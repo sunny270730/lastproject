@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<hr class="m-4">
+<hr class="m-2">
+
+
+<div class="container">
+
+    
+    <div class="col-8 m my-5">
+        <h1 class="display-4 fw-normal">Help Center</h1>
+        <p>Unlike other types of user interface forms, login forms do not come in all shapes and
+            sizes. They are limited to the number of fields that are used. The reason for such a minimal and capsule
+            approach is trivial: people do not like to fill in forms. You cannot be pushy by asking for too much
+            information. These forms should be simple, familiar, and straight to the point.</p>
+        <p>Continues.....</p>
+      </div>
+    <hr class="m-1">
+    <h3>Explore Help Topics</h3>
+    <hr class="m-1">
+    <div class="container">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/static/sign_up.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400"
+                    height="400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">1.Step. User Registration</h1>
+                <p class="lead"><b>User Registration and Onboarding requires huge design and deliberation efforts. When you start thinking about a user registration page, it consists of 4–6 fields:</b>
+
+                   <br><b> First Name</b><br>
+                    <b>Last name</b><br>
+                   <b>Email Address</b> <br>
+                    <b>Password</b><br>
+                    <b>Phone</b>
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a type="button" class="btn btn-primary btn-lg px-4 me-md-2"
+                        href="/signup">Sign_up</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/static/login.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400"
+                    height="400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">2.Step. User Login</h1>
+                <p class="lead"><b>A login page may have a return URL parameter, which specifies where to redirect back after logging in or out. For example, it is returnto= on this site</b>
+
+                   <br><b> Email address</b><br>
+                    <b>Password</b><br>
+                   
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a type="button" class="btn btn-primary btn-lg px-4 me-md-2"
+                        href="/login">Login</a>
+                   
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+{% endblock %}
